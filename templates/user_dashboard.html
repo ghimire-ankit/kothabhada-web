@@ -375,6 +375,25 @@
             justify-content: center;
         }
 
+        /* Leaflet Dark Premium Theme Overrides */
+        .leaflet-popup-content-wrapper,
+        .leaflet-popup-tip {
+            background: rgba(30, 41, 59, 0.9) !important;
+            backdrop-filter: blur(10px);
+            color: #f8fafc !important;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+        }
+
+        .leaflet-popup-content b {
+            color: #818cf8 !important;
+        }
+
+        .leaflet-container a.leaflet-popup-close-button {
+            color: #94a3b8 !important;
+        }
+
         /* Bookings View list styling */
         .bookings-grid {
             display: grid;
@@ -822,8 +841,8 @@
         // Set standard center coordinates (Kathmandu)
         const map = L.map('map').setView([27.7172, 85.3240], 13);
 
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '© OpenStreetMap contributors'
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; OpenStreetMap contributors &copy; CARTO'
         }).addTo(map);
 
         // Parse and draw markers
