@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+kothabada.db
+*.log
+.env
+.agent/
+.vscode/
